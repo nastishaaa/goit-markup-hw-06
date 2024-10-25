@@ -871,7 +871,7 @@ nav{
 
 
 
-@media (min-width: 320px) and (max-width: 768px){
+@media (min-width: 320px) and (max-width: 767px){
 
     .container{
         width: calc(100vw - var(--scrollbar-width, 0px));
@@ -883,26 +883,28 @@ nav{
 
     /* --------- HEAD --------- */
     .header{
-        height: 56px;
-
+        padding-top: 16px;
+        padding-bottom: 16px;
     }
 
     .logo{
-        margin-top: 16px;
-        margin-left: 16px;
         margin-right: 149px;
     }
 
     .svg-phone{
         fill: #2f2f37;
-        margin-top: 16px;
-        position: relative;
+    }
+
+    .header-btn{
+        border: none;
+        font: inherit;
+        color: inherit;
+        background-color: transparent;
     }
 
     .desktop-only{
         display: none;
     }
-
 
     /* --------- MOBILE-MENU ---------- */
 
@@ -971,15 +973,19 @@ nav{
         justify-content: flex-start;
         flex-direction: column;
         gap: 40px;
+        
+        margin-bottom: 168px;
+    }
+
+    .nav-phone{
         font-weight: 700;
         font-size: 36px;
         line-height: 1.11;
         letter-spacing: 0.02em;
         color: #2e2f42;
-        margin-bottom: 168px;
     }
 
-    .phone-menu:active{
+    .nav-phone:active{
         color: #404BBF;
     }
 
@@ -999,6 +1005,7 @@ nav{
 
     .menu-phone-nav{
         margin-top: 72px;
+        margin-bottom: auto;
     }
 
     .phone-address{
@@ -1035,12 +1042,12 @@ nav{
     /*------- HERO ----------- */
 
     .first-section{
-        display: flex;
-        align-items: center;
-        justify-content: center;
         min-width: 320px;
-        padding-top: calc(160px + 36px);
-        background-position: center;
+        padding-top: 144px;
+        background-image: 
+        linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
+        url(../images/dark-bg.jpg);
+        padding-bottom: 72px;
 
     }
 
@@ -1052,9 +1059,7 @@ nav{
     }
     
     .butt{
-        margin-left: 76px;
-        margin-right: 76px;
-        margin-bottom: 72px;
+        margin: 0 auto;
     }
 
 /* -------- FIRST ----------- */
@@ -1065,6 +1070,11 @@ nav{
         justify-content: center;
         flex-direction: column;
         gap: 72px;
+    }
+
+    .second-section{
+        padding-top: 96px;
+        padding-bottom: 96px;
     }
 
     .list-main{
@@ -1094,6 +1104,11 @@ nav{
     
     /*-------- SECOND ---------*/
 
+    .team-section{
+        padding-top: 96px;
+        padding-bottom: 96px;
+    }
+
     .section-title{
         font-weight: 700;
         font-size: 36px;
@@ -1108,12 +1123,16 @@ nav{
         gap: 72px;
     }
 
+    .title-portf{
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+        text-align: center;
+        color: #2e2f42;
+    }
+
     .first-list{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        gap: 32px;
         min-width: 264px;
         margin: 0 auto;
     }
@@ -1146,11 +1165,6 @@ nav{
         color: #2e2f42;
         text-align: start;
         margin-bottom: 8px;
-        margin-left: 16px;
-    }
-
-    .list-paragraph{
-        margin-left: 16px;
     }
 
     /* ------ FOOTER --------- */
@@ -1215,7 +1229,7 @@ nav{
     }
 
     .logo-footer-box{
-        margin-bottom: 72px;
+        margin-right: 0;
     }
     .email-input{
         border-radius: 4px;
@@ -1280,7 +1294,8 @@ nav{
 
 }
 
-@media (min-width: 769px) and (max-width: 1157px){
+@media (min-width: 768px) and (max-width: 1157px){
+    
     .container{
         width: calc(100vw - var(--scrollbar-width, 0px));
     }
@@ -1323,6 +1338,14 @@ nav{
         margin-left: 16px;
     }
 
+    .phone-address{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.04em;
+        color: #434455;
+    }
+
     .header-block{
         display: flex;
         justify-content: space-between;
@@ -1339,14 +1362,20 @@ nav{
         margin: 0;
     }
 
+    .first-properties{
+        margin-bottom: 36px;
+    }
+
+
+
     /* -------- HERO ---------- */
 
     .container-main{
         display: flex;
         align-content: space-between;
         flex-wrap: wrap;
-        column-gap: 72px;
-        row-gap: 24px; 
+        column-gap: 24px;
+        row-gap: 72px; 
     }
 
     .list-main{
@@ -1355,9 +1384,11 @@ nav{
     }
 
     .title-main{
-        font-weight: 700px;
+        font-weight: 700;
         font-size: 36px;
-        line-height: 1.11;
+        line-height: 1.11111;
+        letter-spacing: 0.02em;
+        color: #2e2f42;
     }
 
     /* --------- TEAM --------- */
@@ -1375,15 +1406,10 @@ nav{
 
     .first-list{
         width: calc((100% - 64px) / 2);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
         border-radius: 0 0 4px 4px;
         padding: 0px 0px 32px 0px;
         width: 264px;
         height: 428px;
-        gap: 32px;
         margin: 0 0;
     }
 
@@ -1411,10 +1437,6 @@ nav{
         width: calc((100% - 24px) / 2);
     }
 
-    .img-portfolio{
-        width: 100%;
-    }
-
     /* --------- FOOTER --------- */
     
     .footer-box{
@@ -1422,9 +1444,7 @@ nav{
         justify-content: flex-start;
         align-items: flex-start;
         flex-wrap: wrap;
-        padding-left: 108px;
-        padding-top: 96px;
-        padding-bottom: 96px;
+        
     }
 
     .logo-footer-box{
@@ -1502,7 +1522,10 @@ nav{
 @media (min-resolution: 192dpi) {
     .first-section {
         background-image: 
-        linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
-        url(../images/people-office@2x.jpg);
+        linear-gradient(rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)), 
+        url(../images/people-office@2x.jpg), 
+        url(../images/dark-bg@2x.jpg),
+        url(../images/dark-bg-tablet@2x.jpg);
     }
 }
