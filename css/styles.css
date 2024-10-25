@@ -55,6 +55,7 @@ img{
 .container{
     margin: 0 auto;
     padding: 0 15px;
+    width: 1158px;
 }
 
 .section{
@@ -465,6 +466,11 @@ nav{
     line-height: 1.5;
 }
 
+.footer-box {
+    display: flex;
+    align-items: baseline;
+}
+
 .svg-footer{
     display: flex;
     align-items: flex-start;
@@ -477,6 +483,7 @@ nav{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: flex-start;
     margin-right: 80px;
 }
 
@@ -496,10 +503,6 @@ nav{
     margin-bottom: 16px;
 }
 
-.footer-box{
-    display: flex;
-    align-items: baseline;
-}
 
 .svg-footer-list{
     display: flex;
@@ -560,7 +563,6 @@ nav{
 }
 
 .email-input{
-    margin-right: 24px;
     border: 1px solid #fff;
     border-radius: 4px;
     width: 264px;
@@ -585,9 +587,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 16px 32px;
     min-width: 165px;
-    gap: 10px;
     height: 40px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     background-color: #4d5ae5;
@@ -807,16 +807,16 @@ nav{
     margin-right: 8px;
 }
 
-input[type="checkbox"]:checked + label .cus-checkbox{
-    background-color: #404bbf;
-    border: none; 
-    fill: #F4F4FD;
+.user-check:checked + .check-info .cus-checkbox {
+    background-color: #404bbf; 
+    fill: #404bbf;
 }
 
-.icon-check{
-    fill: #FFFFFF;
+.user-check:checked + .check-info .cus-checkbox svg {
+    opacity: 1;
+    visibility: visible;
+    fill: #f4f4fd;
 }
-
 .check{
     margin-bottom: 24px;
 }
@@ -884,7 +884,7 @@ input[type="checkbox"]:checked + label .cus-checkbox{
     /* --------- HEAD --------- */
     .header{
         height: 56px;
-        z-index: 88;
+
     }
 
     .logo{
@@ -957,12 +957,6 @@ input[type="checkbox"]:checked + label .cus-checkbox{
         z-index: 99;
 
     }
-
-    /* .mobile-menu.is-open  .hidden{
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-    } */
 
     .mobile-menu-container{
         position: relative;
@@ -1287,6 +1281,13 @@ input[type="checkbox"]:checked + label .cus-checkbox{
 }
 
 @media (min-width: 769px) and (max-width: 1157px){
+    .container{
+        width: calc(100vw - var(--scrollbar-width, 0px));
+    }
+
+    body{
+        overflow-x: hidden;
+    }
 
     .svg-image-feature{
         display: none;
@@ -1398,17 +1399,20 @@ input[type="checkbox"]:checked + label .cus-checkbox{
 
     .portfolio-color{
         display: flex;
-        align-content: space-between;
+        align-content: space-around;
         justify-content: center;
         flex-wrap: wrap;
         column-gap: 24px;
-        row-gap: 72x;
-        margin: 0 auto;
+        row-gap: 72px;
+        /* margin: 0 auto; */
     }
 
     .container-list{
-        width: calc((100% - 72px) / 2);
+        width: calc((100% - 24px) / 2);
+    }
 
+    .img-portfolio{
+        width: 100%;
     }
 
     /* --------- FOOTER --------- */
@@ -1416,20 +1420,19 @@ input[type="checkbox"]:checked + label .cus-checkbox{
     .footer-box{
         display: flex;
         justify-content: flex-start;
-        align-items: center;
+        align-items: flex-start;
         flex-wrap: wrap;
         padding-left: 108px;
-    }
-
-    .top-footer{
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
+        padding-top: 96px;
+        padding-bottom: 96px;
     }
 
     .logo-footer-box{
         margin-bottom: 72px;
+        margin-right: 24px;
     }
+
+
     
     /* --------- MODAL ------- */
 
